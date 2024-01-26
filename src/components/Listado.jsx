@@ -3,7 +3,7 @@ import  Table  from 'react-bootstrap/Table';
 const Listado = ({colaboradores}) => {
     return (
         <>
-        <Table responsive striped bordered variant='light'>
+        <Table responsive striped bordered variant='primary'>
             <thead>
                 <tr>
                     <th>Nombre</th>
