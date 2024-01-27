@@ -1,6 +1,6 @@
 import  Table  from 'react-bootstrap/Table';
 
-const Listado = ({colaboradores}) => {
+const Listado = ({colaboradores, deleteColaborador}) => {
     return (
         <>
         <Table responsive striped bordered variant='primary'>
@@ -11,6 +11,7 @@ const Listado = ({colaboradores}) => {
                     <th>Edad</th>
                     <th>Cargo</th>
                     <th>Telefono</th>
+                    <th>Eliminar</th>
                 </tr>
             </thead>
             <tbody>
@@ -21,6 +22,7 @@ const Listado = ({colaboradores}) => {
                     <td>{colaborador.edad}</td>
                     <td>{colaborador.cargo}</td>
                     <td>{colaborador.telefono}</td>
+                    <td><button onClick={() => deleteColaborador(colaborador.nombre)}>Borrar</button></td>
                 </tr>
                  ))}
             </tbody>

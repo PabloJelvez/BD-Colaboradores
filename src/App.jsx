@@ -37,6 +37,13 @@ const handleChange = (e) =>{
       return false
   })
 
+
+  const deleteColaborador = (nombreColaborador) => {
+  const newArray = [...colaboradores];
+  const filtered = newArray.filter(colaborador => colaborador.nombre !== nombreColaborador);
+  setColaboradores(filtered); 
+}
+
   return (
     <>
   <div className='mx-5'>
@@ -48,7 +55,7 @@ const handleChange = (e) =>{
   </Row>  
   <Row>
     <Col sm={12} md={9}>
-      <Listado colaboradores={filterColaboradores} />
+      <Listado colaboradores={filterColaboradores} deleteColaborador={deleteColaborador} />
     </Col>
     <Col md={3}>
       <h2>Agregar colaborador</h2>
